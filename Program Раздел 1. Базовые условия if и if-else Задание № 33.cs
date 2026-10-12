@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program33
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Масса груза (тонны): ");
+            if (double.TryParse(Console.ReadLine(), out double mass))
+            {
+                if (mass > 3.5)
+                    Console.WriteLine("Перегруз!");
+                else
+                    Console.WriteLine("Норма.");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка ввода.");
+            }
+        }
+    }
+}
